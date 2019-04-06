@@ -56,26 +56,20 @@ void swap(struct student* stud, int n, int n2){
 
 	stud[n+1].initials[0] = temp.initials[0];
         stud[n+1].initials[1] = temp.initials[1];
-        stud[n].score = temp.score;
-
-
+        stud[n+1].score = temp.score;
 }
 
 /* sort students initials */
 void sort(struct student* students, int n){
+	/* declare variblaes */
 	int i, j;
-	struct student temp;
-
-
-	temp.initials[0] = students[0].initials[0];
-	temp.initials[1] = students[0].initials[1];
-
-        printf("%s\n", temp.initials);
-
 	
+	/* sort the array */
 	for(i = 0; i < n-1; i++){
 		for(j = 0; j < n-1-i; j++){
-			if((int)students[j].initials[0] > (int)students[j+1].initials[0]){
+			if((int)students[j].initials[0] > (int)students[j+1].initials[0]){ /* check if swap is needed */
+				swap(students, j, j+1);
+			}else if((int)students[j].initials[0] == (int)students[j+1].initials[0] && (int)students[j].initials[1] > (int)students[j+1].initials[1]){ /* swap by checking the second initials if the first initials are the same */
 				swap(students, j, j+1);
 			}
 		}
@@ -116,6 +110,7 @@ int main(){
 	/* sort array by initials */
 	sort(students, n);
 
+	/* print the sorted array */
 	print(students, n);
 
 	/* deallocate dynamic memory */
