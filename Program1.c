@@ -39,11 +39,9 @@ int main(){
 	foo_value = foo(&x, &y, z);	
 
 	/* print values x, y ,z and value from foo() */
-	printf("foo_value = %d, x = %d, y = %d, z = %d\n", foo_value, x, y, z);
-	return 0;
+	printf("foo_value = %d, x = %d, y = %d, z = %d\n\n", foo_value, x, y, z);
 
-	/* By comparing z and the return value of foo() function, foo() value is not the same as the value in z. 
-	 * The reason is that z was passed by value to the foo() function, after exiting the foo() function, z remains as it is.
-	 * But for x and y, they were passed by reference (poiner) , so the change is perminant.
-	 */	
+	printf("By comparing z and the return value of foo() function, foo() value is not the same as the value in z.\nThe reason is that z was passed by value to the foo() function, after exiting the foo() function, z remains as it is.\nBut for x and y, they were passed by reference (poiner) , so the change is perminant.\n");	
+
+	return 0;
 }
