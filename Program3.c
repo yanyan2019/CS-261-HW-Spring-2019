@@ -6,8 +6,8 @@
 
 void sort(int* number, int n){ /* sort the numbers in accsending order */
 	int i, j, temp;
-	for(i = 0; i < n; i++){ /* loop through total number of elements */
-		for(j = 0; j < n-i; j++){ /* exclude the sorted number */
+	for(i = 0; i < n-1; i++){ /* loop through total number of elements */
+		for(j = 0; j < n-i-1; j++){ /* exclude the sorted number */
 			if(number[j] > number[j+1]){ /* swap two numbers */
 				temp = number[j];
 				number[j] = number[j+1];
@@ -37,5 +37,8 @@ int main(){
 		 printf("%d ", arr_ptr[j]);	
 	}
 	printf("\n");	
+	if(arr_ptr != NULL){
+		free(arr_ptr);
+	}
 	return 0;
 }

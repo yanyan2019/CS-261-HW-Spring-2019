@@ -66,7 +66,7 @@ void sort(struct student* students, int n){
 	
 	/* sort the array */
 	for(i = 0; i < n-1; i++){
-		for(j = 0; j < n-1-i; j++){
+		for(j = 0; j < n-i-1; j++){
 			if((int)students[j].initials[0] > (int)students[j+1].initials[0]){ /* check if swap is needed */
 				swap(students, j, j+1);
 			}else if((int)students[j].initials[0] == (int)students[j+1].initials[0] && (int)students[j].initials[1] > (int)students[j+1].initials[1]){ /* swap by checking the second initials if the first initials are the same */
