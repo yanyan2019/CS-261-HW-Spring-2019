@@ -1,4 +1,8 @@
-/* Program4.c */
+/* CS261 - HW1 - Program4.c 
+ * Name: YanYan Lee
+ * Date: 04/08/2019
+ * solution description: sort and print a struct student array 
+ */
 
 #include <stdio.h>
 #include <stdlib.h>

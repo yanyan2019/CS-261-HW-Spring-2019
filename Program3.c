@@ -1,4 +1,8 @@
-/* Program3.c */
+/* CS261 - HW1 - Program3.c 
+ * Name: YanYan Lee
+ * Date: 04/08/2019
+ * solution description: create and sort an integer arrary
+ */
 
 #include <stdlib.h>
 #include <stdio.h>
