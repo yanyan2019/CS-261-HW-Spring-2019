@@ -1,4 +1,8 @@
-/* Program2.c*/
+/* CS261 - HW1 - Program2.c */
+/* Name: YanYan Lee
+ * Date: 04/08/2019
+ * Solution description: create a struct dynamic array for 10 students and print their initials and scores.
+ */
 
 #include <stdlib.h>
 #include <stdio.h>
